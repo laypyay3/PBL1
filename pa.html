@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="CSS/pa.css">
+</head>
+<body style="background-color: #D9D9D9;">
+<style>
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: #000000;
+}
+ 
+nav .logo img {
+  max-width: 100px;
+  height: auto;
+}
+ 
+nav ul {
+  display: flex;
+  list-style: none;
+}
+ 
+nav ul li {
+  margin: 0 10px;
+  position: relative;
+}
+ 
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+ 
+nav ul li a.active,
+nav ul li a:hover {
+  color: #fff;
+  background-color: #000;
+}
+ 
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+ 
+nav ul li:hover ul {
+  display: block;
+}
+ 
+nav ul li ul li a {
+  padding: 10px 15px;
+  color: #000;
+  transition: 0.3s;
+  border-radius: 3px;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+ 
+nav .menu-btn i {
+  color: #000;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+ 
+@media (max-width: 920px) {
+  nav .menu-btn i {
+      display: block;
+  }
+ 
+  #click:checked ~ .menu-btn i:before {
+      content: "\f00d";
+  }
+ 
+  nav ul {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+      z-index: 10;
+      padding: 0;
+  }
+ 
+  #click:checked ~ ul {
+      left: 0;
+  }
+ 
+  nav ul li {
+      width: 100%;
+      margin: 40px 0;
+  }
+ 
+  nav ul li a {
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+ 
+  #click:checked ~ ul li a {
+      margin-left: 0px;
+  }
+ 
+  nav ul li a.active,
+  nav ul li a:hover {
+      background: none;
+      color: cyan;
+  }
+ 
+  nav ul li ul {
+      position: static;
+      display: none;
+      width: 100%;
+      background-color: #111;
+  }
+ 
+  nav ul li ul li {
+      display: block;
+      width: 100%;
+      margin: 0;
+  }
+ 
+  nav ul li ul li a {
+      width: 100%;
+      padding: 10px 0;
+      margin-left: 0;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+}
+.footer-icons {
+  margin: 20px 0;
+}
+.footer-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+.footer-links {
+  margin: 20px 0;
+}
+.footer-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+}
+.footer-copy {
+  margin-top: 20px;
+  color: #888;
+}
+</style>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" style="width: 100px; height: auto;">
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Categories </a>
+                <ul>
+                    <li><a href="indoor.html">Indoor plants</a></li>
+                    <li><a href="outdoor.html">Outdoor plants</a></li>
+                    <li><a href="floweringplant.html">Flowering plants</a></li>
+                    <li><a href="index 2.html"> Book </a></li>
+                </ul>
+            </li>
+            <li><a href="merch.html">Merch </a></li>
+            <li><a href="aboutus.html"> About Us </a></li>
+        </ul>
+    </nav><br><br><Br><br><br><br><br><br>
+
+    <div class="payment-form">
+        <h2>Payment Details</h2>
+        <form>
+            <label for="card-number">Name:</label>
+            <input type="text" id="card-number" name="card-number" required>
+            
+            <label for="expiry-date">Adress:</label>
+            <input type="text" id="expiry-date" name="expiry-date" required>
+            
+            <label for="cvv">Phone number:</label>
+            <input type="text" id="cvv" name="cvv" required>
+            
+            <label for="name">Card Number:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="name">Description:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+    <br><br>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#index.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="#aboutus.html">About</a>
+            <a href="#terms">Terms</a>
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+        <div class="footer-copy">
+            <p>Copyright &copy; TheSill and Terry</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

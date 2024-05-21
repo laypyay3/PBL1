@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="march.css">
+    <script src="https://kit.fontawesome.com/d74d5d6e91.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #D9D9D9;
+            color: #333;
+        
+        
+        }
+        .h4{
+            align-items: center;
+        }
+
+       
+        .container1 {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: calc(25% - 20px); /* Adjusted width for four columns */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s forwards;
+
+        }
+
+        @media only screen and (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px); /* Two cards per row for screens up to 768px */
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px; /* Adjusted height */
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-content {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .card-content h2 {
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            
+        }
+
+        .card-content {
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+        .h1 {
+            text-align: center;
+            animation: fadeIn 1s forwards;
+        }
+
+        .texth2 {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #009A7b; /* Teal green */
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-left: 27%;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #008080; /* Teal green */
+        }
+
+       
+      
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+            animation: fadeIn 1s forwards;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text {
+            padding: 20px 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 80px auto;
+            }
+
+            .text,
+            .image {
+                padding: 10px;
+            }
+        }
+
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+ 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  padding: 20px;
+  color: #333;
+}
+ 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: #000000;
+}
+ 
+nav .logo img {
+  max-width: 100px;
+  height: auto;
+}
+ 
+nav ul {
+  display: flex;
+  list-style: none;
+}
+ 
+nav ul li {
+  margin: 0 10px;
+  position: relative;
+}
+ 
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+ 
+nav ul li a.active,
+nav ul li a:hover {
+  color: #fff;
+  background-color: #000;
+}
+ 
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+ 
+nav ul li:hover ul {
+  display: block;
+}
+ 
+nav ul li ul li a {
+  padding: 10px 15px;
+  color: #000;
+  transition: 0.3s;
+  border-radius: 3px;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+ 
+nav .menu-btn i {
+  color: #000;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+ 
+@media (max-width: 920px) {
+  nav .menu-btn i {
+      display: block;
+  }
+ 
+  #click:checked ~ .menu-btn i:before {
+      content: "\f00d";
+  }
+ 
+  nav ul {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+      z-index: 10;
+      padding: 0;
+  }
+ 
+  #click:checked ~ ul {
+      left: 0;
+  }
+ 
+  nav ul li {
+      width: 100%;
+      margin: 40px 0;
+  }
+ 
+  nav ul li a {
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+ 
+  #click:checked ~ ul li a {
+      margin-left: 0px;
+  }
+ 
+  nav ul li a.active,
+  nav ul li a:hover {
+      background: none;
+      color: cyan;
+  }
+ 
+  nav ul li ul {
+      position: static;
+      display: none;
+      width: 100%;
+      background-color: #111;
+  }
+ 
+  nav ul li ul li {
+      display: block;
+      width: 100%;
+      margin: 0;
+  }
+ 
+  nav ul li ul li a {
+      width: 100%;
+      padding: 10px 0;
+      margin-left: 0;
+  }
+}
+ 
+input[type="checkbox"] {
+  display: none;
+}
+ 
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 100px auto;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 1s forwards;
+}
+ 
+.image {
+  flex: 1;
+  padding: 20px;
+}
+ 
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+ 
+.text {
+  flex: 1;
+  padding: 20px;
+}
+ 
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      margin: 80px auto;
+  }
+ 
+  .text,
+  .image {
+      padding: 10px;
+  }
+}
+ 
+.container1 {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ 
+.card {
+  width: calc(25% - 10px);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+ 
+@media (min-width: 770px) and (max-width: 900px) {
+  .card {
+      width: calc(33.33% - 10px);
+  }
+}
+ 
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 10px);
+  }
+}
+ 
+.card:hover {
+  transform: translateY(-5px);
+}
+ 
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+ 
+/* Ensuring equal height for card content */
+.card-content {
+  padding: 20px;
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+.card-content h2 {
+  color: #333;
+  text-align: center;
+}
+ 
+.card-content p {
+  color: #666;
+}
+ 
+.h1 {
+  text-align: center;
+  animation: fadeIn 1s forwards;
+}
+ 
+.lol {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  text-align: center;
+}
+ 
+.lol2 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  text-align: center;
+}
+ 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+ 
+.btn {
+  background-color: #009A7b; /* Teal green */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-right: 30%;
+}
+ 
+.btn:hover {
+  background-color: #fff;
+  color: #008080; /* Teal green */
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+}
+.footer-icons {
+  margin: 20px 0;
+}
+.footer-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+.footer-links {
+  margin: 20px 0;
+}
+.footer-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+}
+.footer-copy {
+  margin-top: 20px;
+  color: #888;
+}
+
+    </style><br><br>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" style="width: 100px; height: auto;">
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Categories </a>
+                    <ul>
+                        <li><a href="indoor.html">Indoor plants</a></li>
+                        <li><a href="outdoor.html">Outdoor plants</a></li>
+                        <li><a href="floweringplant.html">Flowering plants</a></li>
+                        <li><a href="index 2.html"> Book </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Merch </a></li>
+                <li><a href="aboutus.html"> About Us </a></li>
+            </ul>
+        </nav>
+        <br><br>
+
+    <h1 class="text-center">Populer flowering plants</h1><br>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" style="width: 100px; height: auto;">
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Categories </a>
+                <ul>
+                    <li><a href="indoor.html">Indoor plants</a></li>
+                    <li><a href="outdoor.html">Outdoor plants</a></li>
+                    <li><a href="floweringplant.html">Flowering plants</a></li>
+                    <li><a href="index 2.html"> Book </a></li>
+                </ul>
+            </li>
+            <li><a href="merch.html">Merch </a></li>
+            <li><a href="#"> About Us </a></li>
+        </ul>
+    </nav>
+    
+    
+    
+    <div class="container1">
+        <div class="card">
+            <img src="images/tulips.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h2 class="texth2">Tulips</h2>
+                <p>Tulips: spring's vibrant whispers. Each petal a promise. with the sun light it shines like a golen hour.</p>
+                <h4 class="text-center">20000-30000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/lavnder.jpg" alt="Card Image 2">
+            <div class="card-content">
+                <h2 class="texth2">Lavender</h2>
+                <p>
+                    Lavender's scent: a gentle embrace of twilight whispers. Its essence: a tranquil kiss from a garden's heart.</p>
+                    <h4 class="text-center">30000-35000k</h4>
+                    <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/jade vine.jpg" alt="Card Image 3">
+            <div class="card-content">
+                <h2 class="texth2">Jade Vine</h2>
+                <p>
+                    Jade vine: nature's emerald cascade, a verdant symphony in bloom and in a moonstone vibrant colour.
+                    
+                    
+                    </p>
+                    <h4 class="text-center">20000k-35000k</h4>
+                    <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/orchid.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Orchids></h2>
+                <p>
+                    Orchids: nature's delicate poetry, whispered in petals of grace.it describes love, beauty and charm 
+                </p>
+                <h4 class="text-center">20000-30000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/peach.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Peach</h2>
+                <p>it described Blush of summer, sweet sun-kissed. Golden nectar, whispers of warmth ,ripe with promise.</p>
+                <h4 class="text-center">29000-30000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/mint.webp" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Mint</h2>
+                <p>it represents Cool breeze, essence of clarity and Whispers mint, calming winds blow with cool and minty sents.</p>
+                <h4 class="text-center">50000-60000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <img src="images/sunflower.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Sunflower</h2>
+               
+                <p>it has Golden faces, following the sun's path , radiant , bright , fun , joyful dances and kissed by a summer's glow </p>
+                <h4 class="text-center">100000-150000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+
+
+
+        <div class="card">
+            <img src="images/rose.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Roses</h2>
+                
+                <p>roses are like  timeless love poetry it shows Passion's hue, heart's desire and, romance's sweet symphony.</p>
+                <h4 class="text-center">20000-30000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/yellow ball.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Roses</h2>
+                
+                <p>Marigolds are like endless energy, blessings, warmth, creativity, prosperity and it describes strong passion</p>
+                <h4 class="text-center">20000-30000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/jasmine.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Jasmine</h2>
+                
+                <p>Jasmines descibes beauty, blessings, purity, innocence and cleaness that will fover last.The sent will always be joyful.</p>
+                <h4 class="text-center">20000-30000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/garrrrrrrrrr.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Gardenia</h2>
+                
+                <p>It describes Love, refinement, and purity Peace, harmony, and joy Gentleness Secret love , Pure attraction and give off beach vibes.</p>
+                <h4 class="text-center">30000-35000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/leeeee.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="texth2">Laceleaf</h2>
+                
+                <p>The laceleaf flower, also known as the anthurium or flamingo flower  , symbolizes hospitality, abundance, and love that never ending.</p>
+                <h4 class="text-center">20000-30000k</h4>
+                <a href="pa.html"><button class="btn">Buy Now</button></a>
+            </div>
+        </div>
+            </div>
+            </body>
+            <br><br>
+            <footer class="footer">
+                <div class="footer-links">
+                    <a href="#index.html">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#aboutus.html">About</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+                <div class="footer-copy">
+                    <p>Copyright &copy; TheSill and Terry</p>
+                </div>
+            </footer>
+</html>
